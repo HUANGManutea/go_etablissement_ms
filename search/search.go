@@ -57,11 +57,3 @@ func BinarySearchFile(filename string, target string, offset int, length int) (s
 	return string(lineBuffer), nil
 
 }
-
-// func main() {
-// 	line, err := BinarySearchFile("../data.txt", "0000010", 0, 7)
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// 	fmt.Println(line)
-// }
