@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"reflect"
 	"time"
 
 	Search "go_etablissement_ms/search"
@@ -60,9 +59,7 @@ func getEtablissement(ctx *gin.Context) {
 
 	// rien dans le cache
 	if line == "" {
-		log.Printf("COUCOU\n")
 		searchline, err := Search.BinarySearchFile("./data.txt", id, 0, 7)
-		log.Printf("line: [%v] type of line [%v]\n", line, reflect.TypeOf(line))
 		if err != nil {
 			log.Printf("Error getting the etablissement line: %v\n", err)
 		}
